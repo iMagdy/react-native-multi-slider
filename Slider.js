@@ -1,7 +1,7 @@
 "use strict";
 
 import React from "react";
-import { StyleSheet, PanResponder, View } from "react-native";
+import { StyleSheet, PanResponder, View, ViewPropTypes } from "react-native";
 import PropTypes from "prop-types";
 import converter from "./converter";
 import mockProps from "./mockProps";
@@ -42,12 +42,12 @@ const sliderProps = {
 
   optionsArray: PropTypes.array,
 
-  containerStyle: View.propTypes.style,
-  trackStyle: View.propTypes.style,
-  selectedStyle: View.propTypes.style,
-  unselectedStyle: View.propTypes.style,
-  markerStyle: View.propTypes.style,
-  pressedMarkerStyle: View.propTypes.style
+  containerStyle: ViewPropTypes.style,
+  trackStyle: ViewPropTypes.style,
+  selectedStyle: ViewPropTypes.style,
+  unselectedStyle: ViewPropTypes.style,
+  markerStyle: ViewPropTypes.style,
+  pressedMarkerStyle: ViewPropTypes.style
 };
 
 class Slider extends React.Component {
