@@ -7,6 +7,9 @@
 Pure JS react native slider component with one or two markers.
 Options to customise track, touch area and provide customer markers and callbacks for touch events and value changes.
 
+## Changes
+
+Added support for latest React Native versions (>= 0.49.x) accounting for `ViewPropTypes`, as `View.propTypes` are now officially unsupported.
 
 ## Examples
 
