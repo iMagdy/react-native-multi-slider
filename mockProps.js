@@ -1,8 +1,8 @@
 "use strict";
 
 import React from "react";
-import { ViewPropTypes } from "react-native";
 import PropTypes from "prop-types";
+import { ViewPropTypes } from "react-native";
 
 class BasicMarker extends React.Component {
   static propTypes = {
@@ -23,7 +23,7 @@ class BasicMarker extends React.Component {
   }
 }
 
-var mockProps = {
+const mockProps = {
   values: [0],
   onValuesChangeStart: function() {
     console.log("press started");
