@@ -7,8 +7,8 @@ import { ViewPropTypes } from "react-native";
 class BasicMarker extends React.Component {
   static propTypes = {
     pressed: PropTypes.bool,
-    pressedMarkerStyle: ViewPropTypes.style,
-    markerStyle: ViewPropTypes.style
+    pressedMarkerStyle: ViewPropTypes.style || View.propTypes.style,
+    markerStyle: ViewPropTypes.style || View.propTypes.style
   };
 
   render() {

@@ -42,12 +42,12 @@ const sliderProps = {
 
   optionsArray: PropTypes.array,
 
-  containerStyle: ViewPropTypes.style,
-  trackStyle: ViewPropTypes.style,
-  selectedStyle: ViewPropTypes.style,
-  unselectedStyle: ViewPropTypes.style,
-  markerStyle: ViewPropTypes.style,
-  pressedMarkerStyle: ViewPropTypes.style
+  containerStyle: ViewPropTypes.style || View.propTypes.style,
+  trackStyle: ViewPropTypes.style || View.propTypes.style,
+  selectedStyle: ViewPropTypes.style || View.propTypes.style,
+  unselectedStyle: ViewPropTypes.style || View.propTypes.style,
+  markerStyle: ViewPropTypes.style || View.propTypes.style,
+  pressedMarkerStyle: ViewPropTypes.style || View.propTypes.style
 };
 
 class Slider extends React.Component {
