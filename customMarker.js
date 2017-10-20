@@ -1,37 +1,30 @@
-'use strict';
+"use strict";
 
-var React = require('react');
-var ReactNative = require('react-native');
-var {
-  PropTypes
-} = React;
-var {
-  StyleSheet,
-  Image
-} = ReactNative;
+import React from "react";
+import PropTypes from "prop-types";
+import { StyleSheet, Image } from "react-native";
 
-var CustomMarker = React.createClass({
+const CustomMarker = () => {
+  return (
+    <Image
+      style={styles.image}
+      source={
+        this.props.pressed ? require("./ruby.png") : require("./diamond.png")
+      }
+      resizeMode="contain"
+    />
+  );
+};
 
-  propTypes: {
-    pressed: PropTypes.bool,
-  },
-
-  render: function () {
-    return (
-      <Image
-        style={styles.image}
-        source={this.props.pressed ? require('./ruby.png') : require('./diamond.png')}
-        resizeMode='contain'
-      />
-    );
-  }
-});
-
-var styles = StyleSheet.create({
+const styles = StyleSheet.create({
   image: {
     height: 40,
     width: 40
   }
 });
+
+CustomMarker.propTypes = {
+  pressed: PropTypes.bool
+};
 
 module.exports = CustomMarker;
