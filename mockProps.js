@@ -4,24 +4,19 @@ import React from "react";
 import PropTypes from "prop-types";
 import { ViewPropTypes, View } from "react-native";
 
-class BasicMarker extends React.Component {
-  static propTypes = {
-    pressed: PropTypes.bool,
-    pressedMarkerStyle: ViewPropTypes.style || View.propTypes.style,
-    markerStyle: ViewPropTypes.style || View.propTypes.style
-  };
+const BasicMarker = props => {
+  return (
+    <View
+      style={[props.markerStyle, props.pressed && props.pressedMarkerStyle]}
+    />
+  );
+};
 
-  render() {
-    return (
-      <View
-        style={[
-          this.props.markerStyle,
-          this.props.pressed && this.props.pressedMarkerStyle
-        ]}
-      />
-    );
-  }
-}
+BasicMarker.propTypes = {
+  pressed: PropTypes.bool,
+  pressedMarkerStyle: ViewPropTypes.style || View.propTypes.style,
+  markerStyle: ViewPropTypes.style || View.propTypes.style
+};
 
 const mockProps = {
   values: [0],
