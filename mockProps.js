@@ -2,7 +2,7 @@
 
 import React from "react";
 import PropTypes from "prop-types";
-import { ViewPropTypes } from "react-native";
+import { ViewPropTypes, View } from "react-native";
 
 class BasicMarker extends React.Component {
   static propTypes = {
