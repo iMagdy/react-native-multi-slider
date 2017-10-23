@@ -82,7 +82,7 @@ class Slider extends React.Component {
   }
 
   componentWillMount() {
-    const customPanResponder = function(start, move, end) {
+    const customPanResponder = (start, move, end) => {
       return PanResponder.create({
         onStartShouldSetPanResponder: (evt, gestureState) => true,
         onStartShouldSetPanResponderCapture: (evt, gestureState) => true,
